@@ -4,15 +4,16 @@ const router = express.Router()
 const Dogs = require('../models/dogs.js');
 
 router.get('/', (req, res) => {
-
+    console.log("**************")
     console.log("YOUR IN THE HOME BULLDOG ROUTE")
-    Dogs.create({name:"skadi", age:4})
-    //Dogs.find({})
-    .then(data=>{
-        console.log("++++++")
-        console.log(data)
-        console.log("++++++")
-    })
+    console.log("**************")
+    // Dogs.create({name:"skadi", age:4})
+    // //Dogs.find({})
+    // .then(data=>{
+    //     console.log("++++++")
+    //     console.log(data)
+    //     console.log("++++++")
+    // })
 
     Dogs.find({})
     .then(data=>{
