@@ -1,10 +1,17 @@
 const express = require('express');
 const router = express.Router()
 
-// const User = require('../models/User');
+const Dogs = require('../models/dogs.js');
 
 router.get('/', (req, res) => {
-    
+    Dogs.create({name:"skadi", age:4})
+
+    //Dogs.find({})
+    .then(data=>{
+        console.log("++++++")
+        console.log(data)
+        console.log("++++++")
+    })
     res.send({h:"hello"})
 })
 
