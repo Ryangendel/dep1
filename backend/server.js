@@ -19,6 +19,8 @@ console.log("PROCESSENV")
 //     .catch(err => console.log(err));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dogs", { useNewUrlParser: true });
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use(bodyParser.json());
 app.use(cors());
